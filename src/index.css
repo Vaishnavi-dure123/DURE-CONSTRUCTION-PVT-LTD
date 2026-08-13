@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Color tokens ---- */
+  --color-charcoal: #1a1a1d;
+  --color-charcoal-light: #2a2a2e;
+  --color-orange: #f26419;
+  --color-orange-dark: #d4530f;
+  --color-steel: #2e4057;
+  --color-concrete: #8a8a86;
+  --color-concrete-light: #d8d6d0;
+  --color-cream: #f7f5f2;
+
+  /* ---- Type tokens ---- */
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus ring everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 3px;
+}
+
+/* Ruler / measurement tick divider — the site's signature motif */
+.tick-divider {
+  height: 18px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-concrete) 0px,
+    var(--color-concrete) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 10px;
+  opacity: 0.35;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background-color: var(--color-orange);
+  color: white;
+}
