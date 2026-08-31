@@ -1,6 +1,3 @@
-
-
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, CheckCircle2, X, UserRound } from "lucide-react";

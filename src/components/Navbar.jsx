@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 import useQuotePopup from "../context/useQuotePopup";
-import TopBar from "./TopBar";
+  import TopBar from './TopBar';
 
 const navLinks = [
   { to: "/", label: "Home" },
