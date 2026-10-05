@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 import useQuotePopup from "../context/useQuotePopup";
-  import TopBar from './TopBar';
+import Topbar from './Topbar';
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -82,7 +82,7 @@ export default function Navbar() {
           : "bg-charcoal/40 backdrop-blur-sm"
       }`}
     >
-      <TopBar />
+      <Topbar />
 
       <div className="tick-divider absolute bottom-0 left-0" />
       <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-2 md:px-8">
